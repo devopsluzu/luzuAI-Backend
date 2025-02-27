@@ -1,11 +1,11 @@
 const Razorpay = require('razorpay');
+
 const axios = require('axios');
 const crypto=require('crypto')
 
 const nodemailer = require('nodemailer');
 
 const admin = require('firebase-admin');
-const { auth, firestore } = require('../utils/firebaseAdmin');
 
 const { RAZORPAY_ID_KEY, RAZORPAY_SECRET_KEY, GMAIL_USER, GMAIL_PASS } = process.env;
 
@@ -153,8 +153,6 @@ const sendSignInEmail = async (req, res) => {
       res.status(500).json({ success: false, msg: 'Failed to send sign-in email' });
   }
 };
-
-
 const createPlan = async () => {
     try {
         const planStarter = await razorpayInstance.plans.create({
@@ -344,5 +342,5 @@ module.exports = {
     cancelSubscription,
     verifySubscription,
     sendSignInEmail,
-    sendEmailNotification
+  sendEmailNotification
 };
