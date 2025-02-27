@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const app = express();
+const verifySession = require('./middleware/verifySession');
 const PORT = 5000;
 
 const allowedOrigins = [
@@ -62,8 +63,17 @@ app.use(async (req, res, next) => {
         res.status(401).send('Unauthorized');
     }
 });
+app.use(verifySession);
 
-// Start server
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+// Start server after secrets are loaded
+(async () => {
+    try {
+         // Load secrets before starting the server
+        app.listen(PORT, () => {
+            console.log(`Server is running on port ${PORT}`);
+        });
+    } catch (err) {
+        console.error('Failed to load secrets:', err);
+        process.exit(1); // Exit the application if secrets cannot be loaded
+    }
+})();
