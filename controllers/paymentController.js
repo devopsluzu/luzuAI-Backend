@@ -26,8 +26,8 @@ const transporter = nodemailer.createTransport({
   port: 465, // Common port for SMTP with STARTTLS
   secure: true, // Set to true for port 465 (SSL), or false for port 587 (STARTTLS)
   auth: {
-      user: 'devopsluzu@gmail.com', // Your custom email address
-      pass: 'zwlb irfc wrrf mlkv' // Your email password
+      user: 'infoluzuai@gmail.com', // Your custom email address
+      pass: 'jsoh duzd aesk zyna' // Your email password
   }
 });
 
