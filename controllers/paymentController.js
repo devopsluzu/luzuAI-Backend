@@ -26,8 +26,8 @@ const transporter = nodemailer.createTransport({
   port: 465, // Common port for SMTP with STARTTLS
   secure: true, // Set to true for port 465 (SSL), or false for port 587 (STARTTLS)
   auth: {
-      user: 'info@prfec.ai', // Your custom email address
-      pass: 'zwap nfow xtiu fpiy' // Your email password
+      user: 'devopsluzu@gmail.com', // Your custom email address
+      pass: 'zwlb irfc wrrf mlkv' // Your email password
   }
 });
 
@@ -71,8 +71,7 @@ const sendSignInEmail = async (req, res) => {
           subject: 'Sign In to Your Account',
           html: `
           <html>
-              <head>
-                  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">                   
+              <head>        
                   <style>
                       body {
                           background-color: #f9f9f9;
@@ -135,7 +134,7 @@ const sendSignInEmail = async (req, res) => {
                                   <img src="${logoUrl}" alt="Logo">
                                   <h1>Let's get you signed in</h1>
                                   <p>All you have to do is click this button and we'll sign you in with a secure link</p>
-                                  <a href="${link}" class="button" style="color:black;">Sign in to prfec</a>
+                                  <a href="${link}" class="button" style="color:black;">Sign in to LuzuAI</a>
                                   <p style="font-size:13px;color:#d1d1d1;font-weight:400;margin: 40px 0;">If you did not request this email, you can safely ignore it.</p>
                               </div>
                           </td>

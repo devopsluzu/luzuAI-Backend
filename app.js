@@ -16,6 +16,8 @@ const allowedOrigins = [
     'https://trafy-newbackend-255821839155.us-central1.run.app',
     'https://prfec.ai',
     'https://app.prfec.ai',
+    'https://luzuai-backend-534452319131.us-central1.run.app',
+    'https://luzu-ai-app-534452319131.us-central1.run.app',
     
 ];
 
