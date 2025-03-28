@@ -18,8 +18,8 @@ const allowedOrigins = [
     'https://app.prfec.ai',
     'https://luzuai-backend-534452319131.us-central1.run.app',
     'https://luzu-ai-app-534452319131.us-central1.run.app',
-    'https://luzu.ai/',
-    'https://app.luzu.ai/',
+    'https://luzu.ai',
+    'https://app.luzu.ai',
     
 ];
 
